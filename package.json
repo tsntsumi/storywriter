@@ -1,6 +1,6 @@
 {
-  "name": "solid-nextjs",
-  "version": "0.2.0",
+  "name": "alizza ideal as storywriter",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c \"next dev\"",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tinacms/cli": "^1.5.31",
     "@types/bcrypt": "^5.0.1",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.32",
@@ -28,6 +29,7 @@
     "sharp": "^0.32.6",
     "swiper": "^9.3.2",
     "tailwindcss": "^3.3.5",
+    "tinacms": "^1.5.22",
     "typescript": "^5.2.2"
   }
 }

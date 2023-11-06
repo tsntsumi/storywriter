@@ -40,3 +40,6 @@ yarn-error.log*
 /package-lock.json
 /ui-debug.log
 /yarn.lock
+
+node_modules
+/firebase-debug.log
