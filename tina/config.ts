@@ -22,9 +22,17 @@ export default defineConfig({
     collections: [
       {
         name: 'post',
-        label: 'Posts',
+        label: 'Blog Posts',
         path: 'content/posts',
         format: 'mdx',
+        defaultItem: () => {
+          return {
+            title: 'New Post',
+            author: 'TSUTSUMI Kikuo <kikuo@alizza-ideal.com>',
+            date: new Date().toLocaleString('ja-jp'),
+            tags: ['story'],
+          }
+        },
         fields: [
           {
             type: 'string',
@@ -32,6 +40,30 @@ export default defineConfig({
             label: 'Title',
             isTitle: true,
             required: true,
+          },
+          {
+            label: 'Hero',
+            name: 'hero',
+            type: 'image',
+          },
+          {
+            type: 'reference',
+            name: 'auhor',
+            label: 'Author',
+            collections: ['author'],
+            required: true,
+          },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'Date',
+            required: true,
+          },
+          {
+            name: 'tags',
+            label: 'Tags',
+            type: 'reference',
+            collections: ['tag'],
           },
           {
             type: 'rich-text',
@@ -42,8 +74,34 @@ export default defineConfig({
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+          router: ({ document }) => `/blog/${document._sys.filename}`,
         },
+      },
+      {
+        name: 'tag',
+        label: 'Tags',
+        path: 'content/tags',
+        fields: [
+          {
+            type: 'string',
+            name: 'name',
+            label: 'Tag Name',
+            required: true,
+          },
+        ],
+      },
+      {
+        name: 'author',
+        label: 'Authors',
+        path: 'content/authors',
+        fields: [
+          {
+            type: 'string',
+            name: 'name',
+            label: 'Name',
+            required: true,
+          },
+        ],
       },
     ],
   },
