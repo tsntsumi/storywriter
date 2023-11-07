@@ -13,10 +13,10 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+      <section className="overflow-hidden pb-8 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className=" md:w-1/2">
+            <div className=" md:w-1/2 md:mx-auto">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 🖋️ あなたのビジネスの次のステップは？
               </h4>
@@ -70,7 +70,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="animate_right hidden md:w-1/2 lg:block">
+            <div className="animate_right hidden md:w-1/2 md:block">
               <div className="relative 2xl:-mr-7.5">
                 <Image
                   src="/images/shape/shape-01.png"
@@ -111,6 +111,39 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <section className="overflow-hidden px-4 py-2 md:px-8 2xl:px-0">
+          <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-0">
+            <div className="flex flex-nowrap gap-8 sm:flex-nowrap md:items-center justify-start md:gap-0">
+              <div className="h-full p-0 min-w-[160px] relative">
+                <Image
+                  alt="ご提案"
+                  src="/images/shape/offer-01-small.png"
+                  width={300}
+                  height={240}
+                  className="object-cover mx-0 rounded-lg"
+                />
+                <img
+                  src="https://qr-official.line.me/gs/M_259nufef_GW.png?oat__id=3206600&oat_content=qr"
+                  className="mx-auto w-1/3 max-w-[80px] min-w-[40px] bottom-[6px] right-[6px] absolute"
+                />
+              </div>
+              <div className="mx-6 lg:mx-auto lg:w-2/3 xl:w-3/5">
+                <p>
+                  ３６５日２４時間　働いてる間も　寝てる間も　売れ続けるLP型のHP
+                  Webサイトテンプレートをプレゼント中。 LINEでお友だちになってダウンロードしよう。
+                  <a data-v-6fa6a74a="" href="https://lin.ee/dIMYuwu" className="p-4 inline">
+                    <img
+                      data-v-6fa6a74a=""
+                      src="/images/icon/line-add-friend-ja.png"
+                      alt="友だちになる"
+                      className="w-[80px] inline"
+                    />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   )
