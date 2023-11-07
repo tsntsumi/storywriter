@@ -1,14 +1,24 @@
 import glob from 'glob'
+import path from 'path'
 
 const BlogData = (slug) => {
-  const articles = glob.sync(`../../content/posts/**/*.mdx`)
+  const contentDir = path.join(process.cwd(), '/content/posts/**/*.{mdx,md}')
+  const paths = glob.sync(contentDir)
 
-  const slugs = articles.map((a) => a.split('/')[1].replace(/ /g, '-').slice(0, -3).trim())
+  const blogs = paths.map((p) => {
+    const basename = p.split('/').pop()
+    const s = basename
+      .replace(/ /g, '-')
+      .replace(/\.mdx?$/, '')
+      .trim()
+    return { basename: basename, slug: s }
+  })
 
   if (!slug) {
-    return slugs
+    return blogs
   }
-  return slugs.find((s) => s === slug)
+  const found = blogs.find((b) => b.slug === slug)
+  return found
 }
 
 export default BlogData
