@@ -13,19 +13,6 @@ const menuData: Menu[] = [
     newTab: false,
     path: '/#features',
   },
-  {
-    id: 2.1,
-    title: 'ブログ',
-    newTab: false,
-    path: '/blog',
-  },
-
-  {
-    id: 4,
-    title: 'コンタクト',
-    newTab: false,
-    path: '#footer',
-  },
 ]
 
 export default menuData

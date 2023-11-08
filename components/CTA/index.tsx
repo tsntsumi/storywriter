@@ -76,7 +76,7 @@ const CTA = () => {
                 <Image
                   width={800}
                   height={800}
-                  src="/images/shape/offer-01.png"
+                  src="/images/shape/offer-01-small.png"
                   alt="Story Website Template"
                   className="mx-auto w-[300px]"
                 />

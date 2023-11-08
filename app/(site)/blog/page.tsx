@@ -1,8 +1,8 @@
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import BlogData from '@/components/Blog/BlogData'
 import BlogItem from '@/components/Blog/BlogItem'
 import { Metadata } from 'next'
+import BlogFetch from '@/components/Blog/BlogFetch'
 
 export const metadata: Metadata = {
   title: 'Blog -- Story Marketing',
@@ -11,23 +11,7 @@ export const metadata: Metadata = {
 }
 
 const BlogPage = async () => {
-  const blogData = await Promise.all(
-    BlogData()?.map(async (b, i) => {
-      const mdx = await import(`/content/posts/${b.basename}`)
-      const { data, content } = matter(mdx.default)
-      return {
-        _id: i,
-        title: data.title,
-        slug: b.slug,
-        body: content,
-        metadata: '',
-        mainImage: data.image,
-        author: data.author,
-        tags: data.tags,
-        publishdAt: data.date,
-      }
-    })
-  )
+  const blogData = await BlogFetch()
   return (
     <>
       {/* <!-- ===== Blog Grid Start ===== --> */}

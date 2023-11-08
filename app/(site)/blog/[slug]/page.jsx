@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import SingleBlogPage from '@/components/Blog/SingleBlogPage'
-import BlogData from '@/components/Blog/BlogData'
+import BlogFetch from '@/components/Blog/BlogFetch'
 
 const Page = async (props) => {
   const {
@@ -12,15 +12,14 @@ const Page = async (props) => {
     searchParams,
   } = props
 
-  const blogData = BlogData(slug)
+  const blogs = await BlogFetch(slug)
 
-  if (!blogData) {
+  if (!blogs) {
     redirect('/404')
     return
   }
 
-  const mdx = await import(`/content/posts/${blogData.basename}`)
-  const { data, content } = matter(mdx.default)
+  const blogData = blogs.pop()
 
   return (
     <article className="blog">
@@ -28,8 +27,8 @@ const Page = async (props) => {
         <title>a post</title>
         <meta name="description" content="this is a post" />
       </Head>
-      <SingleBlogPage data={data}>
-        <ReactMarkdown>{content}</ReactMarkdown>
+      <SingleBlogPage data={blogData}>
+        <ReactMarkdown>{blogData.body}</ReactMarkdown>
       </SingleBlogPage>
     </article>
   )
