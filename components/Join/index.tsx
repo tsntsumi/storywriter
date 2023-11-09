@@ -13,14 +13,21 @@ const Join = ({ children }) => {
           {/*<form onSubmit={handleSubmit}>*/}
           <div className="flex flex-wrap gap-5 items-center justify-center">
             <Link
-              href="tel:07090352231"
-              className="font-bold text-xl large rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
+              href="https://lin.ee/QmddQRD"
+              className=" font-bold text-xl justify-between large rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
             >
-              070 9035 2231
+              @259nufef{'  '}
+              <Image
+                src="/images/icon/line-add-friend-ja.png"
+                width="92"
+                height="32"
+                alt="ストーリーライターLINE公式"
+                className="inline-block"
+              />
             </Link>
             {/*<button aria-label="get started button"*/}
             <Link
-              href="tel:07090352231"
+              href="https://lin.ee/QmddQRD"
               className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
             >
               {children}

@@ -39,7 +39,7 @@ const Details = () => {
             ))}
             {/* <!-- Features item End --> */}
           </div>
-          <Join>話を聞く</Join>
+          <Join>一緒に始めましょう</Join>
         </div>
       </section>
 
