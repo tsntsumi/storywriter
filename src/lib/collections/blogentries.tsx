@@ -1,6 +1,6 @@
 import { buildCollection, buildProperty } from "firecms"
 import { BlogEntryPreview } from "./blogentrypreview"
-import { BlogEntry } from "./types"
+import { BlogEntry } from "@/types/blog"
 
 export const blogCollection = buildCollection<BlogEntry>({
   name: "Blog entries",
@@ -14,7 +14,7 @@ export const blogCollection = buildCollection<BlogEntry>({
     }
   ],
   properties: {
-    name: buildProperty({
+    title: buildProperty({
       name: "Title",
       validation: { required: true },
       dataType: "string"
@@ -24,8 +24,8 @@ export const blogCollection = buildCollection<BlogEntry>({
       validation: { required: true },
       dataType: "string"
     }),
-    header_image: buildProperty({
-      name: "Header image",
+    main_image: buildProperty({
+      name: "Header Image",
       dataType: "string",
       storage: {
         mediaType: "image",
@@ -41,10 +41,16 @@ export const blogCollection = buildCollection<BlogEntry>({
       validation: { required: true },
       dataType: "string"
     }),
+    tags: buildProperty({
+      name: "Tags",
+      dataType: "array",
+      of: buildProperty({
+        name: "Tag",
+        dataType: "string"
+      })
+    }),
     summary: buildProperty({
       name: "Summary",
-      description:
-        "Example of a complex array with multiple properties as children",
       validation: { required: true },
       dataType: "string",
       columnWidth: 400,

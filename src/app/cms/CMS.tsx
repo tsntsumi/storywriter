@@ -40,12 +40,12 @@ export default function CMS() {
   }, [])
 
   if (loading) {
-    return <div className="text-center">Now loading...</div>
+    return <div className="text-center mt-12">Now loading...</div>
   }
 
   return (
     <FirebaseCMSApp
-      name={"Story Make Sales"}
+      name={"STORY MAKES SALES"}
       basePath={"/cms"}
       authentication={myAuthenticator}
       collections={[blogCollection, productsCollection]}

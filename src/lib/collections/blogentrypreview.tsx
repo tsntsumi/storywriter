@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Image from "next/image"
 import {
   Box,
   CardActionArea,
@@ -19,7 +20,7 @@ import {
   useStorageSource
 } from "firecms"
 import { productsCollection } from "./products"
-import { BlogEntry, Product } from "./types"
+import { BlogEntry, Product } from "@/types/blog"
 
 /**
  * This is a sample view used to render the content of a blog entry.
@@ -32,12 +33,12 @@ export function BlogEntryPreview({
 
   const [headerUrl, setHeaderUrl] = useState<string | undefined>()
   useEffect(() => {
-    if (modifiedValues?.header_image) {
+    if (modifiedValues?.main_image) {
       storage
-        .getDownloadURL(modifiedValues.header_image)
+        .getDownloadURL(modifiedValues.main_image)
         .then((res) => setHeaderUrl(res.url))
     }
-  }, [storage, modifiedValues?.header_image])
+  }, [storage, modifiedValues?.main_image])
 
   return (
     <Box>
@@ -62,7 +63,7 @@ export function BlogEntryPreview({
           flexDirection: "column"
         }}
       >
-        {modifiedValues?.name && (
+        {modifiedValues?.title && (
           <Typography
             variant={"h3"}
             sx={{
@@ -70,7 +71,7 @@ export function BlogEntryPreview({
               marginBottom: "20px"
             }}
           >
-            {modifiedValues.name}
+            {modifiedValues.title}
           </Typography>
         )}
 
@@ -144,7 +145,7 @@ export function StorageImage({ storagePath }: { storagePath: string }) {
   if (!storagePath) return <></>
 
   return (
-    <img
+    <Image
       alt={"Generic"}
       style={{
         objectFit: "contain",

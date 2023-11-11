@@ -20,13 +20,14 @@ export type Product = {
 }
 
 export type BlogEntry = {
-  name: string
-  header_image: string
-  content: (BlogEntryImages | BlogEntryText | BlogEntryProducts)[]
-  summary: BlogEntryText
+  title: string
+  main_image: string
+  summary: string
+  slug: string
   author: string
-  status: string
   tags: string[]
+  content: (BlogEntryImages | BlogEntryText | BlogEntryProducts)[]
+  status: string
   created_on: Date
 }
 

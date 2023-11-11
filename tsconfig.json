@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./public/*"]
     },
     "lib": [
       "dom",
@@ -11,6 +11,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
@@ -24,7 +25,7 @@
         "name": "next"
       }
     ]
-  },
+  }, "strictNullChecks": true,
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
