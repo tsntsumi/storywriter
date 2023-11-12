@@ -21,49 +21,35 @@ const Hero = () => {
                 🖋️ あなたの次の打ち手は？
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                あなたのストーリー・セールスファネル戦略を
+                あなたのセールスファネル戦略を
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
                   構築
                 </span>
               </h1>
               <p className="text-justify">
-                あなたがスモールビジネスの
-                <ruby>
-                  ストーリー・セールスファネル<rp>(</rp>
-                  <rt>マーケティング</rt>
-                  <rp>)</rp>
-                </ruby>
-                戦略を構築するなら、ストーリー・マーケティング・ライターのつつみきくお（Alizza
-                Ideal）をご指名ください。
+                売れる商品は、最高の商品ではありません。
+                最もわかりやすい商品です。。
+              </p>
+              <p>お客へのメッセージをシンプルにしてください。</p>
+              <p>
+                シンプルで明確でわかりやすいメッセージを届ければ、
+                あなたのお店にお客が集まり続けます。
               </p>
               <p>
-                あなたの
-                <ruby>
-                  コアバリュー<rp>(</rp>
-                  <rt>真の価値</rt>
-                  <rp>)</rp>
-                </ruby>
-                と、
-                <ruby>
-                  フィロソフィー<rp>(</rp>
-                  <rt>想い</rt>
-                  <rp>)</rp>
-                </ruby>
-                を、 お客様に伝わるシンプルで明解なストーリーを構築します。
+                メッセージをわかりやすく伝えるには、
+                ストーリーを使うのが近道です。
               </p>
 
               <div className="mt-10">
                 {/*<form onSubmit={handleSubmit}>*/}
                 <div className="flex flex-wrap gap-5">
-                  {/* <input value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="text"
-                      placeholder="メアドを入力"
-                      className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                      /> */}
                   <Join>一緒に始めましょう</Join>
                   {/*</button>*/}
                 </div>
+                <p>
+                  Alizza Idealのストーリーライター公式LINEアカウントで、
+                  お友だちになってください。
+                </p>
                 {/*</form>*/}
 
                 <p className="mt-5 text-black dark:text-white"></p>
@@ -126,6 +112,8 @@ const Hero = () => {
                   src="https://qr-official.line.me/gs/M_259nufef_GW.png?oat__id=3206600&oat_content=qr"
                   className="mx-auto w-1/3 max-w-[80px] min-w-[40px] bottom-[6px] right-[6px] absolute"
                   alt="Template Image"
+                  width={128}
+                  height={128}
                 />
               </div>
               <div className="mx-6 lg:mx-auto lg:w-2/3 xl:w-3/5">
@@ -136,13 +124,15 @@ const Hero = () => {
                   <a
                     data-v-6fa6a74a=""
                     href="https://lin.ee/dIMYuwu"
-                    className="p-4 inline"
+                    className="p-1.5 pb-2 inline bg-white rounded"
                   >
-                    <img
+                    <Image
                       data-v-6fa6a74a=""
                       src="/images/icon/line-add-friend-ja.png"
                       alt="友だちになる"
                       className="w-[80px] inline"
+                      width="92"
+                      height="32"
                     />
                   </a>
                 </p>

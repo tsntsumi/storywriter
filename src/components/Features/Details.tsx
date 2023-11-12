@@ -21,9 +21,9 @@ const Details = () => {
                 <>
                   あなたのセールス・ファネルを
                   <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                    一緒に構築する時
+                    一緒に構築する時{" "}
                   </span>
-                  Alizza Idealはどのように動きますか？
+                  Alizza Idealはこんなふうに仕事をします。
                 </>
               ),
               description: ``

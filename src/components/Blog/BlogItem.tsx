@@ -29,7 +29,7 @@ const BlogItem = ({ blog }: { blog: BlogEntry }) => {
           href={`/blog/${blog.slug}`}
           className="relative block aspect-[368/239]"
         >
-          <Image src={blog.main_image} alt={blog.title} fill />
+          <Image src={blog.hero_image} alt={blog.title} fill />
         </Link>
 
         <div className="px-4">

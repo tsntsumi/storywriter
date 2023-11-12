@@ -1,9 +1,14 @@
-import RelatedPost from '@/components/Blog/RelatedPost'
-import SharePost from '@/components/Blog/SharePost'
-import { Metadata } from 'next'
-import Image from 'next/image'
+import RelatedPost from "@/components/Blog/RelatedPost"
+import SharePost from "@/components/Blog/SharePost"
+import { Metadata } from "next"
+import Image from "next/image"
+import { getStorage, ref, getDownloadURL } from "firebase/storage"
+
+const storage = getStorage()
 
 const SingleBlogPage = async ({ data, children }) => {
+  const heroImageRef = ref(storage, data.hero_image)
+  const url = await getDownloadURL(heroImageRef)
   return (
     <>
       <section className="pb-20 pt-20 lg:pb-25 lg:pt-30 xl:pb-30 xl:pt-40">
@@ -14,7 +19,7 @@ const SingleBlogPage = async ({ data, children }) => {
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
-                      src={'/images/blog/blog-01.png'}
+                      src={url}
                       alt="Kobe Steel plant that supplied"
                       fill
                       className="rounded-md object-cover object-center"
@@ -28,18 +33,23 @@ const SingleBlogPage = async ({ data, children }) => {
 
                 <ul className="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
                   <li>
-                    <span className="text-black dark:text-white">Author: </span>{' '}
-                    {data.author || 'Anonymouth'}
+                    <span className="text-black dark:text-white">Author: </span>{" "}
+                    {data.author || "Anonymouth"}
                   </li>
                   <li>
                     <span className="text-black dark:text-white">
-                      Published On: {data.date?.toLocaleDateString() || 'Someday'}
-                    </span>{' '}
+                      Published On:{" "}
+                      {data.date?.toLocaleDateString() || "Someday"}
+                    </span>{" "}
                   </li>
                   <li>
-                    <span className="text-black dark:text-white">Category:</span>
-                    {' [ '}
-                    {data.tags?.map((t) => t.toUpperCase()).join(', ') || 'unspecified'} {' ]'}
+                    <span className="text-black dark:text-white">
+                      Category:
+                    </span>
+                    {" [ "}
+                    {data.tags?.map((t) => t.toUpperCase()).join(", ") ||
+                      "unspecified"}{" "}
+                    {" ]"}
                   </li>
                 </ul>
 

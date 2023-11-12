@@ -1,10 +1,10 @@
-'use client'
-import React from 'react'
-import featuresData from './featuresData'
-import SingleFeature from './SingleFeature'
-import SectionHeader from '../Common/SectionHeader'
-import FeaturesDetail from './Details'
-import Join from '@/components/Join'
+"use client"
+import React from "react"
+import featuresData from "./featuresData"
+import SingleFeature from "./SingleFeature"
+import SectionHeader from "../Common/SectionHeader"
+import FeaturesDetail from "./Details"
+import Join from "@/components/Join"
 
 const Feature = () => {
   return (
@@ -15,7 +15,7 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: 'ストーリーによる戦略',
+              title: "ストーリーによる戦略",
               subtitle: (
                 <>
                   ストーリー・セールスファネル戦略を採用すれば、あなたのビジネスが
@@ -26,9 +26,9 @@ const Feature = () => {
               ),
               description: (
                 <>
-                  ストーリー・セールスファネル戦略の概略がわかったら、その次は？ストーリー・セールスファネル戦略のフレームワークを理解しただけでは、ビジネス成長にはつながりません。つまり、その時こそ、ストーリー・セールスファネル戦略を導入する時です。
+                  ストーリー・セールスファネル戦略の概略がわかったら、その次は？ストーリー・セールスファネル戦略の仕組みを理解しただけでは、ビジネス成長にはつながりません。つまり、その時こそ、ストーリー・セールスファネル戦略を導入する時です。
                 </>
-              ),
+              )
             }}
           />
           {/* <!-- Section Title End --> */}
@@ -41,7 +41,7 @@ const Feature = () => {
             ))}
             {/* <!-- Features item End --> */}
           </div>
-          <Join>話を聞く</Join>
+          <Join>LINEでメッセージを送る</Join>
         </div>
       </section>
 

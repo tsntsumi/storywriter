@@ -129,6 +129,9 @@ pre {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
 }
 
+.footer a {
+    @apply underline decoration-dashed
+}
 
 .notice p {
   @apply mb-8 text-base leading-relaxed text-titlebgdark dark:text-waterloo;

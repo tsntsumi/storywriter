@@ -1,5 +1,3 @@
-import { EntityReference } from "firecms"
-
 export type Product = {
   name: string
   main_image: string
@@ -10,7 +8,6 @@ export type Product = {
   description: string
   amazon_link: string
   images: string[]
-  related_products: EntityReference[]
   publisher: {
     name: string
     external_id: string
@@ -21,12 +18,12 @@ export type Product = {
 
 export type BlogEntry = {
   title: string
-  main_image: string
+  hero_image: string
   summary: string
   slug: string
   author: string
   tags: string[]
-  content: (BlogEntryImages | BlogEntryText | BlogEntryProducts)[]
+  content: (BlogEntryImages | BlogEntryText)[]
   status: string
   created_on: Date
 }
