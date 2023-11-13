@@ -21,23 +21,26 @@ const Hero = () => {
                 🖋️ あなたの次の打ち手は？
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                あなたのセールスファネル戦略を
+                あなたのセールスファネル戦略を一緒に
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
                   構築
                 </span>
               </h1>
               <p className="text-justify">
-                売れる商品は、最高の商品ではありません。
-                最もわかりやすい商品です。。
-              </p>
-              <p>お客へのメッセージをシンプルにしてください。</p>
-              <p>
-                シンプルで明確でわかりやすいメッセージを届ければ、
-                あなたのお店にお客が集まり続けます。
+                売れる商品とは、最高の商品ではありません。
+                最もわかりやすい商品です。
               </p>
               <p>
-                メッセージをわかりやすく伝えるには、
-                ストーリーを使うのが近道です。
+                商品が、お客にとってどんなメリットがあるかわかりにくければ、
+                そもそも興味も持ってくれません。
+              </p>
+              <p>
+                シンプルで明確な、わかりやすいメッセージで魅力を伝えれば、
+                あなたの商品は、今よりも簡単に売れるようになります。
+              </p>
+              <p>
+                そして、そのメッセージを、セールスファネルに組み込めば、
+                あなたの商品は売れ続けていき、ビジネスが成長していきます。
               </p>
 
               <div className="mt-10">
