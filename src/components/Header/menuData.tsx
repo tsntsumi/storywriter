@@ -1,18 +1,30 @@
-import { Menu } from '@/types/menu'
+import { Menu } from "@/types/menu"
 
 const menuData: Menu[] = [
   {
     id: 1,
-    title: 'ホーム',
+    title: "ホーム",
     newTab: false,
-    path: '/',
+    path: "/"
   },
   {
     id: 2,
-    title: '特徴',
+    title: "特徴",
     newTab: false,
-    path: '/#features',
+    path: "/#features"
   },
+  {
+    id: 2.1,
+    title: "Blog",
+    newTab: false,
+    path: "/blog"
+  },
+  {
+    id: 2.2,
+    title: "About",
+    newTab: false,
+    path: "/who-we-are"
+  }
 ]
 
 export default menuData

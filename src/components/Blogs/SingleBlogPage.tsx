@@ -2,13 +2,12 @@ import RelatedPost from "@/components/Blog/RelatedPost"
 import SharePost from "@/components/Blog/SharePost"
 import { Metadata } from "next"
 import Image from "next/image"
-import { getStorage, ref, getDownloadURL } from "firebase/storage"
-
-const storage = getStorage()
+import { storage } from "@/lib/firebase"
+import { ref, getDownloadURL } from "firebase/storage"
 
 const SingleBlogPage = async ({ data, children }) => {
-  const heroImageRef = ref(storage, data.hero_image)
-  const url = await getDownloadURL(heroImageRef)
+  const image = ref(storage(), data.hero)
+  const imageURL = await getDownloadURL(image)
   return (
     <>
       <section className="pb-20 pt-20 lg:pb-25 lg:pt-30 xl:pb-30 xl:pt-40">
@@ -19,8 +18,8 @@ const SingleBlogPage = async ({ data, children }) => {
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
-                      src={url}
-                      alt="Kobe Steel plant that supplied"
+                      src={imageURL}
+                      alt="data.title"
                       fill
                       className="rounded-md object-cover object-center"
                     />
