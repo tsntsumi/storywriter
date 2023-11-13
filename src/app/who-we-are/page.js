@@ -37,11 +37,45 @@ export default async function Page() {
         {/* <!-- Section Title End --> */}
       </div>
 
-      <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-        <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          <div>
-            <h3>Alizza Idealの紹介動画をご覧ください</h3>
-            <div>
+      <div className="mx-auto mt-15 px-4 md:px-8 xl:mt-20 xl:px-0">
+        <div className="mx-auto md:w-2/3">
+          <div></div>
+          <div className="mx-auto">
+            <h3>わたしたちが目指すもの</h3>
+            <div className="px-6 my-10">
+              <p>わたしたちは、</p>
+              <ul className="font-bold">
+                <li>
+                  最先端ので人気のマーケティング手法を学んだり、実践している暇のない、
+                </li>
+                <li>目の前のお客様へのサービスに集中されている、</li>
+                <li>地域の小型店舗に向けて、</li>
+              </ul>
+              <p>
+                マーケティング情報と、マーケティング実務の代行をしています。
+              </p>
+              <p>
+                あなたは、SNS・Googleマップ・
+                Google広告・ホームページ・ランディングページ（LP）を
+                活用して、売上を上げたいと思っていませんか？
+              </p>
+              <p>でも、やろうとしても時間がない。</p>
+              <p>やってみたけど、よくわからなくて先に進めない。</p>
+              <p>そんな店舗オーナーさんは、大勢います。</p>
+              <p>
+                もしあなたが、そういったことで困っているのなら、
+                わたしたちはあなたに進むべき方向をお伝えし、
+                一歩前に進むお手伝いをすることができます。
+              </p>
+              <p>
+                目的地がわかって、進むべき方角が決まれば、
+                あなたのビジネスは目標に向かってどんどん成長していくことでしょう。
+              </p>
+            </div>
+            <h4 className="text-center">
+              Alizza Idealの紹介動画をご覧ください
+            </h4>
+            <div className="max-w-[480px] md:w-1/3 mx-auto">
               <video
                 width="1080"
                 height="1920"
@@ -53,7 +87,7 @@ export default async function Page() {
                 autoPlay={false}
                 loop={false}
                 playsInline={true}
-                className="mx-auto"
+                className="mx-auto object-cover"
               />
             </div>
           </div>
